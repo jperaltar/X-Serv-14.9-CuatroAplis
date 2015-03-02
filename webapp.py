@@ -15,6 +15,7 @@ October 2009, February 2015
 
 import socket
 
+
 class app:
     """Application to which webApp dispatches. Does the real work
 
@@ -100,4 +101,5 @@ class webApp:
 if __name__ == "__main__":
     anapp = app()
     otherapp = app()
-    testWebApp = webApp("localhost", 1234, {'/anapp': anapp, '/other': otherapp})
+    testWebApp = webApp("localhost", 1234, {'/anapp': anapp,
+                                            '/other': otherapp})

@@ -6,10 +6,11 @@ import sumador
 import aleat
 import sys
 
+
 class adios(webapp.app):
     def process(self, parsedRequest):
         return ("200 OK", "<html><body>Adios</body></html>\r\n")
-        
+
 
 class hola(webapp.app):
     def process(self, parsedRequest):
@@ -21,8 +22,11 @@ if __name__ == "__main__":
         adios = adios()
         sumador = sumador.Sumador()
         aleat = aleat.Aleat()
-        testWebApp = webapp.webApp("localhost", 1234, {'/hola': hola,'/adios': adios,
-                                                    '/suma': sumador, '/aleat': aleat})
+        testWebApp = webapp.webApp("localhost", 1234, 
+                                {'/hola': hola,
+                                        '/adios': adios,
+                                        '/suma': sumador,
+                                        '/aleat': aleat})
     except KeyboardInterrupt:
         print "Closing service"
         sys.exit()

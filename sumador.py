@@ -4,6 +4,7 @@
 import webapp
 import sys
 
+
 class Sumador(webapp.app):
     first = None
 
@@ -21,7 +22,7 @@ class Sumador(webapp.app):
             try:
                 self.first = int(parsedRequest)
                 reply = ("El primero es " + str(self.first) +
-                    ". Dame otro")
+                            ". Dame otro")
             except ValueError:
                 return None
         else:
